@@ -1,0 +1,55 @@
+PLACES
+Ministry of Truth
+	Desk
+	Canteen
+	Corridor
+Ministry of Peace
+Ministry of Love
+	Room 101
+	Holding Area
+	Cell
+	Torture Room
+Victory Mansions
+	Winstons Flat
+	Parson's Flat
+	Reception
+	Landing
+	Broken lift
+Mr Charingtons
+	Shop
+	Flat
+	Back alley
+Woods (by train)
+Party Meeting place
+O'brien's
+Chestnut Tree Cafe
+Law courts (where hanging happen)?
+Cinema
+
+ACTIONS
+work
+Write in diary
+Read book
+Attend meeting
+Two minutes hate
+Attend Hangings
+Go to cinema
+Excercise
+
+
+PEOPLE
+Winston Smith
+Julia
+O'brien
+Parsons
+Parson's wife
+Parson's kids
+Amplforth
+Syme
+Jones/Eronsom/Rutherford
+Martin
+(Beetle like men)
+Laundry women
+Lottery men
+Old pub man
+Bar man
