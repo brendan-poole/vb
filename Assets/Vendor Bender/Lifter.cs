@@ -16,13 +16,13 @@ public class Lifter : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		float targetPosition = StartY + Mathf.Sin (frame * Mathf.Deg2Rad) * 2.1f;
+		float targetPosition = StartY + Mathf.Sin (frame * Mathf.Deg2Rad) * 1f;
 		float diff = rigidbody.position.y - targetPosition;
 		if (diff < 0) {
 						rigidbody.velocity =  (new Vector3 (0, 1, 0));
 				} else {
 			rigidbody.velocity =  (new Vector3 (0, -1, 0));
 				}
-		frame += .5f;
+		frame += 1f;
 	}
 }
