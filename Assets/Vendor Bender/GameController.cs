@@ -4,6 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
 	public Tool CurrentTool;
+	public float lifterAngle;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,8 @@ public class GameController : MonoBehaviour {
 					CurrentTool = Tool.Block;
 				} else if(hitInfo.rigidbody.name.Equals("GrogButton")) {
 					CurrentTool = Tool.Grog;
+				} else if(hitInfo.rigidbody.name.Equals("LifterButton")) {
+					CurrentTool = Tool.Lifter;
 				}
 			}
 		}

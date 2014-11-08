@@ -9,6 +9,9 @@ public class Draw : MonoBehaviour {
 	GameObject monkey;
 	GameObject block;
 	GameObject grog;
+	GameObject lifter;
+	bool lifterDirection;
+
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +21,7 @@ public class Draw : MonoBehaviour {
 		antiRoller = GameObject.Find ("AntiRoller");
 		block = GameObject.Find ("Block");
 		grog = GameObject.Find ("Grog");
+		lifter = GameObject.Find ("Lifter");
 	}
 	
 	// Update is called once per frame
@@ -40,6 +44,16 @@ public class Draw : MonoBehaviour {
 				Instantiate (block, newPosition, block.transform.rotation);
 			} else if (game.CurrentTool == Tool.Grog) {
 				Instantiate (grog, newPosition, grog.transform.rotation);
+			} else if (game.CurrentTool == Tool.Lifter) {
+				GameObject newLifter = (GameObject)Instantiate (lifter, newPosition, lifter.transform.rotation);
+				((Lifter)newLifter.transform.Find("Cube.003").GetComponent("Lifter")).direction = lifterDirection;
+
+				if(lifterDirection) {
+					((Lifter)newLifter.transform.Find("Cube.003").GetComponent("Lifter")).renderer.material.color = Color.blue;
+				} else {
+					((Lifter)newLifter.transform.Find("Cube.003").GetComponent("Lifter")).renderer.material.color = Color.red;
+				}
+				lifterDirection = !lifterDirection;
 			}
 		}
 		if (hit && Input.GetKey (KeyCode.Mouse0) && game.CurrentTool == Tool.Clear
